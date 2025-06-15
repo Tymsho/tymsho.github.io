@@ -128,7 +128,7 @@ const observer = new IntersectionObserver(entries => {
       entry.target.classList.remove('visible');
     }
   });
-}, { threshold: 0.8 });
+}, { threshold: 0.7 });
 
 document.querySelectorAll('.animate-panel').forEach(panel => {
   observer.observe(panel);
