@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio de Tymsho</title>
+  <link rel="stylesheet" href="estilos.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="navbar">
+  <nav>
+    <ul class="nav-links">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#sobremi">Sobre mí</a></li>
+      <li><a href="#habilidades">Habilidades</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#educacion">Educación</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <section id="inicio" class="comic-cover">
+    <div class="comic-frame animate-panel">
+      <h1 class="nombre">Tymsho</h1>
+      <h2 class="titulo">Estudiante de Tecnicatura en Programacion</h2>
+      <p class="lema">"Per Aspera Ad Astra"</p>
+      
+      <div class="avatar-container">
+        <img src="img/FotoComic.png" alt="Ilustración estilo cómic" class="avatar">
+      </div>
+
+      <div class="botones">
+        <a href="pdf/cv.pdf" class="btn">📄 Ver CV</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobremi" class="comic-panel animate-panel">
+  <h2>🦸 Sobre Mí</h2>
+  <div class="bio">
+    <p>Me llamo Martin Ñañez Lemos, soy un apasionado del desarrollo y la tecnología, soy muy curioso por como funcionan las cosas que veo y utilizo, la idea de poder tener un mayor control de la tecnologia me motiva a seguir aprendiendo</p>
+    <p>Estoy en busca de mi primera oportunidad en la industria IT</p>
+  </div>
+
+  <div class="skills">
+    <h3>💬 Soft Skills</h3>
+    <ul>
+      <li>Comunicación clara y efectiva</li>
+      <li>Resolución de problemas</li>
+      <li>Trabajo en equipo</li>
+      <li>Aprendizaje continuo</li>
+      <li>Cursiosidad intelectual</li>
+    </ul>
+  </div>
+
+  <div class="tech">
+    <h3>🛠️ Tecnologías que manejo</h3>
+    <div class="tech-icons">
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JavaScript</span>
+      <span>Git</span>
+      <span>C#</span>
+      <span>SQL Server</span>
+      <span>WinForms</span>
+    </div>
+  </div>
+</section>
+
+<section id="habilidades" class="comic-panel animate-panel">
+  <h2>⚙️ Habilidades Técnicas</h2>
+  <ul>
+    <li>Manejo de estructuras de datos y algoritmos</li>
+    <li>Diseño de interfaces con HTML, CSS y JS</li>
+    <li>Programación en C# y WinForms</li>
+    <li>Consultas y gestión con SQL Server</li>
+    <li>Control de versiones con Git</li>
+    <li>Buen manejo de ingles en escritura y lectura</li>
+  </ul>
+</section>
+
+<section id="proyectos" class="comic-panel animate-panel">
+  <h2>🧪 Proyectos</h2>
+
+  <div class="project">
+    <img src="img/textProgram.png" alt="Text Program" class="project-img">
+    <div class="project-info">
+      <h3>📝 Text Program</h3>
+      <p>Programa de consola con C++, manejo de funciones, arreglos y matrices.</p>
+      <a href="https://github.com/Tymsho/Text_Program" target="_blank" class="comic-button">Ver en GitHub</a>
+    </div>
+  </div>
+
+  <div class="project">
+    <img src="img/starCrew.png" alt="Gestor de Misiones" class="project-img">
+    <div class="project-info">
+      <h3>📅 Star Crew Manager</h3>
+      <p>Aplicación en WinForms para manejar tripulantes y asignaciones. C# + Base de Datos.</p>
+      <a href="https://github.com/Tymsho/StarCrew_Manager" target="_blank" class="comic-button">Ver en GitHub</a>
+    </div>
+  </div>
+</section>
+
+
+<section id="educacion" class="comic-panel animate-panel">
+  <h2>🎓 Educación</h2>
+  <p>Estudiante de Tecnicatura en programacion de la Universidad Tenologica Nacional</p>
+</section>
+
+<section id="contacto" class="comic-panel animate-panel">
+  <h2>📬 Contacto</h2>
+  <p>¿Querés ponerte en contacto conmigo? Escribime por:</p>
+  <ul>
+    <li>📧 Email: martinnzlm@gmail.com</li>
+    <li>💼 LinkedIn: <a href="https://www.linkedin.com/in/mart%C3%ADn-%C3%B1a%C3%B1ez-lemos-10816122b/" target="_blank">Martin Ñañez</a></li>
+    <li>📱 GitHub: <a href="https://github.com/Tymsho" target="_blank">Tymsho</a></li>
+  </ul>
+</section>
+
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    } else {
+      entry.target.classList.remove('visible');
+    }
+  });
+}, { threshold: 0.8 });
+
+document.querySelectorAll('.animate-panel').forEach(panel => {
+  observer.observe(panel);
+});
+
+</script>
+
+
+</body>
+</html>
